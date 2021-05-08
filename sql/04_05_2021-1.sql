@@ -1,0 +1,1 @@
+﻿select course.department_id from student stu, class, course where stu.class_id = class.class_id and class.Course_Id = Course.Course_Id and stu.Prn='1003'

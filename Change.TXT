@@ -1,0 +1,16 @@
+change session 
+
+// need to change y
+
+// check y
+
+//updating the record  y
+
+//ivankshu y 
+
+teacher grid view fname, lname y
+
+TackAttendance for QR y
+
+Reports Query y
+

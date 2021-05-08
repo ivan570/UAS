@@ -1,0 +1,16 @@
+﻿.one {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+
+td > input.one {
+    padding: 3px;
+    margin: 2px;
+    font-weight: 500;
+}
+
+th.one {
+    font-size: initial;
+    font-style: inherit;
+}
+   

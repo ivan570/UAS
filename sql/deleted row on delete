@@ -1,0 +1,24 @@
+faculty -> Department 
+
+Department -> Course
+
+Course -> Class
+
+Class -> OTPt,
+		Student, 
+		Subject
+
+Subject -> Teacher_Subject,
+			Student_Subject
+
+Teacher -> Teacher_Subject
+
+
+Teacher_Subject -> Attendance,
+					OTP
+
+-- baki
+Student -> Student_Subject,
+			StudentAttendance_0 --most imp
+
+for  student add on delete cascade 

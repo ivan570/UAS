@@ -1,0 +1,44 @@
+﻿.one {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+
+.font {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+
+td > input.one {
+    padding: 3px;
+    font-weight: 500;
+}
+
+.padding {
+    padding-left: 0.8%;
+}
+
+th.header {
+    padding: 8px;
+}
+
+.margin-top {
+    margin-top: 2px;
+}
+
+.lable {
+    font-size: 17px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    padding: 0;
+    margin: 0;
+}
+
+.Name {
+    text-transform: capitalize;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 40px !important;
+    margin: 0 !important;
+}
+
+.complete_padding {
+    padding: 20px;
+}
