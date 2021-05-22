@@ -63,7 +63,7 @@
                 
                  <asp:TemplateField HeaderStyle-Width="11%" HeaderStyle-CssClass="header font" HeaderText="Subject is Elective Type">
                     <ItemTemplate>
-                        <asp:Label ID="course_e_type" TextMode="Number" CssClass="one" runat="server" Text='<%#Eval("E_type") %>'></asp:Label>
+                        <asp:Label ID="course_e_type" TextMode="Number" CssClass="one" runat="server" Text='<%#Eval("E_type").ToString().ToLower()=="true"? "Yes":"No" %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

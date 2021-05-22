@@ -27,7 +27,7 @@
         <br />
 
         <fieldset id="view_course" runat="server">
-            <legend>View Course</legend>
+            <legend>View Class</legend>
             <table class="table">
                 <asp:GridView ID="classGrid" runat="server" AutoGenerateColumns="False"
                     OnRowCancelingEdit="classGrid_RowCancelingEdit"

@@ -30,7 +30,7 @@ namespace UAS_MSU.Admin
 
 			String DepartmentName = "";
 			String queryfor = "select course.department_id from student stu, class, course where " +
-				" stu.class_id = class.class_id and class.Course_Id = Course.Course_Id and stu.Prn='"+prn+"'";
+				" stu.class_id = class.class_id and class.Course_Id = Course.Course_Id and stu.Prn='" + prn + "'";
 
 			if (con.State == System.Data.ConnectionState.Closed)
 				con.Open();
@@ -38,8 +38,10 @@ namespace UAS_MSU.Admin
 			SqlCommand cmd1 = new SqlCommand(queryfor, con);
 			using (SqlDataReader sqlReader = cmd1.ExecuteReader())
 			{
-				sqlReader.Read();
-				DepartmentName += sqlReader.GetValue(0).ToString();
+				if (sqlReader.Read())
+					DepartmentName += sqlReader.GetValue(0).ToString();
+				else
+					return null;
 			}
 
 			if (con.State == System.Data.ConnectionState.Open)
@@ -102,6 +104,9 @@ namespace UAS_MSU.Admin
 
 			log.Info("show data " + query);
 
+			if (query == null)
+				return;
+
 			SqlCommand cmd = new SqlCommand(query, con);
 
 			SqlDataAdapter adapt = new SqlDataAdapter(query, con);
@@ -123,6 +128,9 @@ namespace UAS_MSU.Admin
 
 			String query = getQuery(prn);
 			log.Info("exports data " + query);
+
+			if (query == null)
+				return;
 
 			Constant.CreateExcel(this, query, "reports.xlsx", "student");
 		}

@@ -43,7 +43,7 @@
 
 			<asp:TemplateField HeaderText="Present or not ???" HeaderStyle-CssClass="header font">
 				<ItemTemplate>
-					<asp:Label ID="isPresent" runat="server" CssClass="one" Text='<%#Eval("isPresent") %>'></asp:Label>
+					<asp:Label ID="isPresent" runat="server" CssClass="one" Text='<%#Eval("isPresent").ToString().ToLower() == "true" ? "Present":"Absent" %>'></asp:Label>
 				</ItemTemplate>
 			</asp:TemplateField>
 
